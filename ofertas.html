@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulaciones Laborales</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para el diseño */
+        .navbar-custom { background-color: #ffd700; }
+        .nav-link { color: #000; font-weight: bold; }
+        .carousel-item img { max-height: px; object-fit: cover; width: 100%; }
+        .card img { height: 150px; object-fit: cover; }
+        .btn-apply { background-color: #ffc107; color: #fff; font-weight: bold; }
+        .btn-apply:hover { background-color: #e0a800; }
+        .featured-products, .categories { padding: 2rem 0; }
+
+        /* Estilo para las imágenes de fondo del carrusel */
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Asegura que las imágenes queden detrás del contenido */
+        }
+
+        /* Asegura que las ofertas destacadas se mantengan visibles sobre el fondo */
+        .featured-products {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Evitar que el texto de la imagen del carrusel se superponga a la imagen */
+        .carousel-caption {
+            position: relative;
+            z-index: 2; /* Mantener el texto por encima de la imagen */
+        }
+
+        .carousel-item {
+            height: 400px; /* Ajusta la altura según tus necesidades */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #carousel1-item1 {
+            background-image: url('images/Banner\ de\ Descuentos\ Simple\ Turquesa\ y\ Blanco.png');
+        }
+
+        #carousel1-item2 {
+            background-image: url('images/Banner\ Horizontal\ Rebajas\ Tienda\ de\ Indumentaria\ Fotográfico\ Blanco.png');
+        }
+
+
+        /* Personalización opcional */
+        .navbar-custom {
+            background-color: #ffd700;
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PostulaYa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                    </li>
+                    <!-- Registro -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-plus"></i> Registro
+                        </a>
+                    </li>
+                    <!-- Premium -->
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner de Promoción -->
+    <div id="promoCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div id="carousel1-item1" class="carousel-item active">
+                <div class="carousel-caption d-none d-md-block">
+                    <br><br><br><br>
+                </div>
+            </div>
+            <div id="carousel1-item2" class="carousel-item">
+                <div class="carousel-caption d-none d-md-block">
+                    <br><br><br><br>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+   <!-- Sección Ofertas Destacadas -->
+<div id="promoCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div id="carousel1-item1" class="carousel-item active">
+            <div class="carousel-caption d-none d-md-block">
+                <br><br><br><br>
+            </div>
+        </div>
+        <div id="carousel1-item2" class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<!-- Sección Ofertas Destacadas -->
+<div class="container featured-products text-center mt-5" id="destacadas">
+    <h3 class="mb-4">Ofertas Destacadas</h3>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista (1).png" class="card-img-top" alt="Oferta 1">
+                <div class="card-body">
+                    <h5 class="card-title">Desarrollador Web</h5>
+                    <p class="card-text">Únete a una empresa líder en tecnología.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
+                <div class="card-body">
+                    <h5 class="card-title">Analista de Datos</h5>
+                    <p class="card-text">Empresa innovadora busca analista de datos.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista.png" class="card-img-top" alt="Oferta 3">
+                <div class="card-body">
+                    <h5 class="card-title">Gerente de Marketing</h5>
+                    <p class="card-text">Lidera campañas exitosas en marketing.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PostulaFácil. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

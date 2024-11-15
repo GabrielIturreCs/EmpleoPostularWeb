@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>webwing</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <div class="header_bo">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-9 col-sm-7">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
+                           <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="index.html">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">Acerca de</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="service.html">Postulaciones</a>
+                              </li>
+                            
+                         
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="col-md-3 col-sm-5 d_none">
+                     <ul class="sign">
+                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        <li><a class="sign_btn" href="#">Regístrate</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+     
+      <!-- testimonial -->
+   <!-- Formulario de Registro -->
+   <div id="register" class="contact">
+      <div class="container mt-5">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="titlepage">
+                      <h2><strong class="yellow">Registro de Usuario</strong></h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-8 offset-md-2">
+                  <form onsubmit="registerUser(event)" id="register_form" class="contact_form">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <input class="contact_control" placeholder="Usuario" type="text" id="username" required>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="contact_control" placeholder="Nombre" type="text" id="firstName" required>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="contact_control" placeholder="Apellido" type="text" id="lastName" required>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="contact_control" placeholder="Correo Electrónico" type="email" id="email" required>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="contact_control" placeholder="Contraseña" type="password" id="password" required>
+                          </div>
+                          <div class="col-md-12">
+                              <button type="submit" class="send_btn">Registrar</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Modal de Confirmación -->
+  <div id="registerModal" class="modal">
+      <div class="modal-content">
+          <p style="color: green; font-size: 18px;">Registro con éxito</p>
+          <a href="services.html" class="close-modal">Aceptar</a>
+      </div>
+  </div>
+
+  <!-- Modal de Éxito -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="successModalLabel">Registro Exitoso</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  ¡Te has registrado con éxito!
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="redirectToServices()">Continuar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Función para manejar el registro y mostrar el modal
+      function registerUser(event) {
+          event.preventDefault(); // Evita que el formulario se envíe
+
+          // Captura los valores del formulario (puedes procesarlos si deseas guardarlos)
+          const username = document.getElementById('username').value;
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          // Muestra el modal de éxito
+          $('#successModal').modal('show');
+      }
+
+      // Redirecciona a la página de servicios después del registro
+      function redirectToServices() {
+          window.location.href = "service.html";
+      }
+  </script>
+      <!-- end testimonial -->
+    
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <a class="logo2" href="#"><img src="images/loogo2.png" alt="#" /></a>
+                  </div>
+                  <div class="col-lg-5 col-md-6 col-sm-6">
+                     <h3>Contáctanos</h3>
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Jujuy, Argentina</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> contacto@postulaciones.com</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+54 11 12345678</li>
+                     </ul>
+                     <ul class="social_icon">
+                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6">
+                     <h3>Menú</h3>
+                     <ul class="link_icon">
+                        <li class="active"> <a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Acerca de</a></li>
+                        <li> <a href="service.html">Servicios</a></li>
+                        <li> <a href="team.html">Equipo</a></li>
+                        <li> <a href="client.html">Clientes</a></li>
+                        <li> <a href="contact.html">Contacto</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6">
+                     <h3>Publicaciones Recientes</h3>
+                     <ul class="link_icon">
+                        <li> <a href="#">Participa en nuestras vacantes</a></li>
+                        <li><a href="#">Reuniones para equipos de trabajo</a></li>
+                        <li> <a href="#">Nuevas oportunidades de empleo</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <h3>Newsletter</h3>
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input class="news" placeholder="Tu correo electrónico" type="email" name="Your Email">
+                           </div>
+                           <div class="col-md-12">
+                              <button class="send">Suscríbete</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer_bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>© 2024 Todos los derechos reservados | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

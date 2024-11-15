@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>webwing</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+     <style>
+ .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;  /* Esto es importante para evitar que las imágenes se salgan del contenedor */
+    height: 700px; /* Altura fija del carrusel para evitar desbordes */
+}
+
+.carousel-item {
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Mantener la transición suave */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Asegura que la imagen siempre cubra toda la altura del contenedor sin desbordar */
+    object-fit: cover; /* Mantiene la imagen en el contenedor, recortando la parte extra si es necesario */
+    overflow: hidden; /* Evita que cualquier parte de la imagen salga del contenedor */
+}
+
+/* Control de las flechas */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    width: 5%;
+    z-index: 5;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Fondo del carrusel (opcional, si deseas personalizarlo) */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.card img {
+    height: 250px; /* Ajusta la altura según sea necesario */
+    object-fit: cover;
+}
+
+/* Ajusta el tamaño de la tarjeta */
+.card {
+    height: 400px; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Estilo para el botón Postularse */
+.btn-apply {
+    background-color: #ffc107; /* Color amarillo */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+    background-color: #e0a800; /* Hover en color amarillo más oscuro */
+}
+     </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <div class="header_bo">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-9 col-sm-7">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
+                           <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="index.html">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">Acerca de</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="service.html">Postulaciones</a>
+                              </li>
+                            
+                       
+                              
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="col-md-3 col-sm-5 d_none">
+                     <ul class="sign">
+                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        <li><a class="sign_btn" href="client.html">Regístrate</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+ 
+      <!-- service section -->
+     <!-- Banner de Promoción -->
+<!-- Banner de Promoción -->
+<div id="promoCarousel" class="carousel slide" data-ride="carousel">
+   <div class="carousel-inner">
+       <!-- Primer Imagen del Carrusel -->
+       <div id="carousel1-item1" class="carousel-item active">
+           <img src="images/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block w-100" alt="Imagen 1">
+           <div class="carousel-caption d-none d-md-block">
+               <h5>Descuentos Especiales</h5>
+               <p>¡Aprovecha nuestras ofertas limitadas!</p>
+           </div>
+       </div>
+       <!-- Segunda Imagen del Carrusel -->
+       <div id="carousel1-item2" class="carousel-item">
+           <img src="images/Banner Horizontal Rebajas Tienda de Indumentaria Fotográfico Blanco.png" class="d-block w-100" alt="Imagen 2">
+           <div class="carousel-caption d-none d-md-block">
+               <h5>Rebajas en Indumentaria</h5>
+               <p>Encuentra todo lo que necesitas con un descuento exclusivo.</p>
+           </div>
+       </div>
+   </div>
+   <!-- Controles del Carrusel -->
+   <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="sr-only">Anterior</span>
+   </a>
+   <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="sr-only">Siguiente</span>
+   </a>
+</div>
+
+<!-- Sección Ofertas Destacadas -->
+<div class="container featured-products text-center mt-5" id="destacadas">
+   <h3 class="mb-4">Ofertas Destacadas</h3>
+   <div class="row">
+       <div class="col-12 col-sm-6 col-md-4 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
+               <div class="card-body">
+                   <h5 class="card-title">Desarrollador Web</h5>
+                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
+                   <a href="contact.html" class="btn btn-apply">Postularse</a>
+               </div>
+           </div>
+       </div>
+       <div class="col-12 col-sm-6 col-md-4 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
+               <div class="card-body">
+                   <h5 class="card-title">Analista de Datos</h5>
+                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
+                   <a href="contact.html" class="btn btn-apply">Postularse</a>
+               </div>
+           </div>
+       </div>
+       <div class="col-12 col-sm-6 col-md-4 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
+               <div class="card-body">
+                   <h5 class="card-title">Gerente de Marketing</h5>
+                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
+                   <a href="contact.html" class="btn btn-apply">Postularse</a>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- Sección Ofertas Normales -->
+<div class="container normal-products text-center mt-5" id="normales">
+   <h3 class="mb-4">Ofertas Normales</h3>
+   <div class="row">
+       <!-- Oferta 1 -->
+       <div class="col-12 col-sm-6 col-md-3 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
+               <div class="card-body">
+                   <h5 class="card-title">Desarrollador Web</h5>
+                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
+                   <a href="contact.html" class="btn btn-apply btn-sm">Postularse</a>
+               </div>
+           </div>
+       </div>
+       <!-- Oferta 2 -->
+       <div class="col-12 col-sm-6 col-md-3 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
+               <div class="card-body">
+                   <h5 class="card-title">Analista de Datos</h5>
+                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
+                   <a href="contact.html" class="btn btn-apply btn-sm">Postularse</a>
+               </div>
+           </div>
+       </div>
+       <!-- Oferta 3 -->
+       <div class="col-12 col-sm-6 col-md-3 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
+               <div class="card-body">
+                   <h5 class="card-title">Gerente de Marketing</h5>
+                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
+                   <a href="contact.html" class="btn btn-apply btn-sm">Postularse</a>
+               </div>
+           </div>
+       </div>
+       <!-- Oferta 4 (Añadida) -->
+       <div class="col-12 col-sm-6 col-md-3 mb-4">
+           <div class="card shadow-sm rounded">
+               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (3).png" class="card-img-top" alt="Oferta 4">
+               <div class="card-body">
+                   <h5 class="card-title">Diseñador Gráfico</h5>
+                   <p class="card-text">Diseña creativos para campañas digitales.</p>
+                   <a href="contact.html" class="btn btn-apply btn-sm">Postularse</a>
+               </div>
+           </div>
+       </div>
+       
+   </div>
+</div>
+      <!-- service section -->
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <a class="logo2" href="#"><img src="images/loogo2.png" alt="#" /></a>
+                  </div>
+                  <div class="col-lg-5 col-md-6 col-sm-6">
+                     <h3>Contáctanos</h3>
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Buenos Aires, Argentina</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> contacto@postulaciones.com</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+54 11 12345678</li>
+                     </ul>
+                     <ul class="social_icon">
+                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6">
+                     <h3>Menú</h3>
+                     <ul class="link_icon">
+                        <li class="active"> <a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Acerca de</a></li>
+                        <li> <a href="service.html">Servicios</a></li>
+                        <li> <a href="team.html">Equipo</a></li>
+                        <li> <a href="client.html">Clientes</a></li>
+                        <li> <a href="contact.html">Contacto</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6">
+                     <h3>Publicaciones Recientes</h3>
+                     <ul class="link_icon">
+                        <li> <a href="#">Participa en nuestras vacantes</a></li>
+                        <li><a href="#">Reuniones para equipos de trabajo</a></li>
+                        <li> <a href="#">Nuevas oportunidades de empleo</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <h3>Newsletter</h3>
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input class="news" placeholder="Tu correo electrónico" type="email" name="Your Email">
+                           </div>
+                           <div class="col-md-12">
+                              <button class="send">Suscríbete</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer_bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>© 2024 Todos los derechos reservados | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
