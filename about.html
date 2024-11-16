@@ -38,6 +38,59 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         /* Colores de fondo y texto */
+         #about {
+             background-color: #f4f8fb !important;  /* Fondo suave */
+         }
+         .about_box {
+             background-color: #ffffff !important;  /* Fondo blanco para el cuadro */
+             padding: 30px;
+             border-radius: 10px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;  /* Sombra sutil */
+         }
+         h2 {
+             color: #2a4d7f !important; /* Título con un azul vibrante */
+             font-size: 32px !important;
+             font-weight: bold;
+         }
+         h3 {
+             color: #333 !important; /* Subtítulo con color gris oscuro */
+             font-size: 24px !important;
+             font-weight: 600;
+         }
+         span {
+             color: #777 !important; /* Texto en gris claro */
+             font-size: 16px !important;
+             line-height: 1.6;
+         }
+         p {
+             color: #555 !important; /* Texto en gris medio */
+             font-size: 16px !important;
+             line-height: 1.8;
+         }
+         .try {
+             color: #2a4d7f !important; /* Naranja/rojo para destacar el llamado a la acción */
+             font-size: 18px !important;
+             font-weight: bold;
+         }
+         .read_morea {
+             color: #2a4d7f !important; /* Azul vibrante para el enlace */
+             font-size: 18px !important;
+             font-weight: 600;
+             text-decoration: none;
+             margin-top: 15px;
+             display: inline-block;
+         }
+         .read_morea:hover {
+             text-decoration: underline;
+         }
+         .about_img figure img {
+             width: 100% !important;
+             border-radius: 10px !important;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+         }
+     </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -52,7 +105,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-9 col-sm-7">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
                            <span class="navbar-toggler-icon"></span>
                         </button>
@@ -67,14 +120,19 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="service.html">Postulaciones</a>
                               </li>
-                            
-                           
-                            
+                              <li class="nav-item">
+                                 <a class="nav-link" href="team.html">Premiun</a>
+                              </li>
+                              <!-- Solo mostrar en dispositivos pequeños (md y menores) -->
+                              <li class="nav-item d-md-none">
+                                 <a class="nav-link sign_btn" href="#">Regístrate</a>
+                              </li>
                            </ul>
                         </div>
                      </nav>
                   </div>
-                  <div class="col-md-3 col-sm-5 d_none">
+                  <!-- En la versión de escritorio (md y mayores), muestra el botón de registro a la derecha -->
+                  <div class="col-md-3 col-sm-5 d-none d-md-block">
                      <ul class="sign">
                         <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                         <li><a class="sign_btn" href="client.html">Regístrate</a></li>
@@ -88,37 +146,39 @@
       <!-- end header -->
      
       <!-- about section -->
-      <div id="about" class="about">
+      <div id="about" class="about" style="background-color: #f4f8fb; padding: 50px 0;">
          <div class="container-fluid">
-            <div class="row">
-               <!-- Texto informativo -->
-               <div class="col-md-12 col-lg-7">
-                  <div class="about_box">
-                     <div class="titlepage">
-                        <h2><strong class="yellow">Postulaciones y Ofertas Laborales</strong><br> ENCUENTRA EL EMPLEO IDEAL</h2>
+             <div class="row">
+                 <!-- Texto informativo -->
+                 <div class="col-md-12 col-lg-7">
+                     <div class="about_box" style="background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                         <div class="titlepage">
+                             <h2 style="color: #2a4d7f; font-size: 32px; font-weight: bold;"><strong class="yellow">Postulaciones y Ofertas Laborales</strong><br> ENCUENTRA EL EMPLEO IDEAL</h2>
+                         </div>
+                         <h3 style="color: #333; font-size: 24px; font-weight: 600;">CONÉCTATE CON EMPRESAS ASOCIADAS</h3>
+                         <span style="color: #777; font-size: 16px; line-height: 1.6;">Descubre miles de oportunidades laborales y postúlate fácilmente desde una única plataforma.</span>
+                         <p style="color: #555; font-size: 16px; line-height: 1.8; margin-top: 20px;">
+                             Nuestra red incluye empresas líderes en tecnología, marketing, salud y más. Gracias a nuestras alianzas estratégicas, 
+                             ofrecemos oportunidades que se adaptan a tus habilidades y metas profesionales.
+                         </p>
+                         <p style="color: #555; font-size: 16px; line-height: 1.8;">
+                             Postúlate hoy mismo y haz que tu perfil destaque con nuestro creador de CV en línea. Da el siguiente paso hacia tu carrera ideal.
+                         </p>
+                         <span class="try" style="color: #ff6f61; font-size: 18px; font-weight: bold;">CONSIGUE TU EMPLEO EN MENOS PASOS</span>
+                         <a class="read_morea" href="service.html" style="color: #2a4d7f; font-size: 18px; font-weight: 600; text-decoration: none; margin-top: 15px; display: inline-block;">
+                            Explorar Ofertas <i class="fa fa-angle-right" aria-hidden="true" style="color: #2a4d7f;"></i>
+                         </a>
                      </div>
-                     <h3>CONÉCTATE CON EMPRESAS ASOCIADAS</h3>
-                     <span>Descubre miles de oportunidades laborales y postúlate fácilmente desde una única plataforma.</span>
-                     <p>
-                        Nuestra red incluye empresas líderes en tecnología, marketing, salud y más. Gracias a nuestras alianzas estratégicas, 
-                        ofrecemos oportunidades que se adaptan a tus habilidades y metas profesionales.
-                     </p>
-                     <p>
-                        Postúlate hoy mismo y haz que tu perfil destaque con nuestro creador de CV en línea. Da el siguiente paso hacia tu carrera ideal.
-                     </p>
-                     <span class="try">CONSIGUE TU EMPLEO EN MENOS PASOS</span>
-                     <a class="read_morea" href="#">Explorar Ofertas <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                  </div>
-               </div>
-               <!-- Imagen de soporte -->
-               <div class="col-md-12 col-lg-5">
-                  <div class="about_img">
-                     <figure><img src="images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" alt="Ofertas Laborales" /></figure>
-                  </div>
-               </div>
-            </div>
+                 </div>
+                 <!-- Imagen de soporte -->
+                 <div class="col-md-12 col-lg-5">
+                     <div class="about_img">
+                         <figure><img src="images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" alt="Ofertas Laborales" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/></figure>
+                     </div>
+                 </div>
+             </div>
          </div>
-      </div>
+     </div>
       <!-- about section -->
      
       <footer>

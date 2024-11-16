@@ -44,20 +44,52 @@
     position: relative;
     width: 100%;
     overflow: hidden;  /* Esto es importante para evitar que las imágenes se salgan del contenedor */
-    height: 700px; /* Altura fija del carrusel para evitar desbordes */
+   
 }
 
-.carousel-item {
-    position: relative;
-    transition: transform 0.5s ease-in-out; /* Mantener la transición suave */
+
+/* Estilo para Ofertas Abiertas */
+#ofertas-abiertas {
+    font-size: 36px !important; /* Tamaño grande para el título */
+    font-weight: bold !important;
+    color: #2a4d7f !important; /* Un azul más oscuro para contrastar */
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
+    background: linear-gradient(45deg, #ff6f61, #ff9a8b) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out !important;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%; /* Asegura que la imagen siempre cubra toda la altura del contenedor sin desbordar */
-    object-fit: cover; /* Mantiene la imagen en el contenedor, recortando la parte extra si es necesario */
-    overflow: hidden; /* Evita que cualquier parte de la imagen salga del contenedor */
+#ofertas-abiertas:hover {
+    transform: scale(1.1) !important;
+    color: #ffffff !important;
 }
+
+/* Estilo para Ofertas Destacadas */
+#ofertas-destacadas {
+    font-size: 36px !important; /* Tamaño grande para el título */
+    font-weight: bold !important;
+    color: #ffd900 !important; /* Un color dorado cálido para resaltar */
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3) !important;
+    background: linear-gradient(45deg, #00c6ff, #0072ff) !important; /* Degradado frío azul */
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out !important;
+}
+
+#ofertas-destacadas:hover {
+    transform: scale(1.1) !important;
+    color: #ffffff !important;
+}
+
 
 /* Control de las flechas */
 .carousel-control-prev,
@@ -119,42 +151,47 @@
       <!-- end loader -->
       <!-- header -->
       <header>
-         <div class="header_bo">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-9 col-sm-7">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
-                           <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="index.html">Inicio</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="about.html">Acerca de</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="service.html">Postulaciones</a>
-                              </li>
-                            
-                       
-                              
-                           </ul>
-                        </div>
-                     </nav>
-                  </div>
-                  <div class="col-md-3 col-sm-5 d_none">
-                     <ul class="sign">
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                        <li><a class="sign_btn" href="client.html">Regístrate</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
+        <div class="header_bo">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-9 col-sm-7">
+                    <nav class="navigation navbar navbar-expand-md navbar-dark">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
+                          <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarsExample04">
+                          <ul class="navbar-nav mr-auto">
+                             <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="about.html">Acerca de</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="service.html">Postulaciones</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="team.html">Premiun</a>
+                             </li>
+                             <!-- Solo mostrar en dispositivos pequeños (md y menores) -->
+                             <li class="nav-item d-md-none">
+                                <a class="nav-link sign_btn" href="#">Regístrate</a>
+                             </li>
+                          </ul>
+                       </div>
+                    </nav>
+                 </div>
+                 <!-- En la versión de escritorio (md y mayores), muestra el botón de registro a la derecha -->
+                 <div class="col-md-3 col-sm-5 d-none d-md-block">
+                    <ul class="sign">
+                       <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                       <li><a class="sign_btn" href="client.html">Regístrate</a></li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </header>
       <!-- end header inner -->
       <!-- end header -->
  
@@ -162,38 +199,36 @@
      <!-- Banner de Promoción -->
 <!-- Banner de Promoción -->
 <div id="promoCarousel" class="carousel slide" data-ride="carousel">
-   <div class="carousel-inner">
-       <!-- Primer Imagen del Carrusel -->
-       <div id="carousel1-item1" class="carousel-item active">
-           <img src="images/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block w-100" alt="Imagen 1">
-           <div class="carousel-caption d-none d-md-block">
-               <h5>Descuentos Especiales</h5>
-               <p>¡Aprovecha nuestras ofertas limitadas!</p>
-           </div>
-       </div>
-       <!-- Segunda Imagen del Carrusel -->
-       <div id="carousel1-item2" class="carousel-item">
-           <img src="images/Banner Horizontal Rebajas Tienda de Indumentaria Fotográfico Blanco.png" class="d-block w-100" alt="Imagen 2">
-           <div class="carousel-caption d-none d-md-block">
-               <h5>Rebajas en Indumentaria</h5>
-               <p>Encuentra todo lo que necesitas con un descuento exclusivo.</p>
-           </div>
-       </div>
-   </div>
-   <!-- Controles del Carrusel -->
-   <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
-       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="sr-only">Anterior</span>
-   </a>
-   <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="sr-only">Siguiente</span>
-   </a>
-</div>
-
+    <div class="carousel-inner">
+        <!-- Primer Imagen del Carrusel -->
+        <div id="carousel1-item1" class="carousel-item active">
+            <img src="images/Banner de Descuentos Simple Turquesa y Blanco.png" class="d-block w-100" alt="Imagen 1">
+            <div class="carousel-caption d-none d-md-block">
+     
+            </div>
+        </div>
+        <!-- Segunda Imagen del Carrusel -->
+        <div id="carousel1-item2" class="carousel-item">
+            <img src="images/Banner Horizontal Rebajas Tienda de Indumentaria Fotográfico Blanco.png" class="d-block w-100" alt="Imagen 2">
+            <div class="carousel-caption d-none d-md-block">
+             
+            </div>
+        </div>
+    </div>
+    <!-- Controles del Carrusel -->
+    <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+ </div>
 <!-- Sección Ofertas Destacadas -->
 <div class="container featured-products text-center mt-5" id="destacadas">
-   <h3 class="mb-4">Ofertas Destacadas</h3>
+    <h3 id="ofertas-destacadas" class="mb-4">Ofertas Destacadas🔥🔥</h3>
+
    <div class="row">
        <div class="col-12 col-sm-6 col-md-4 mb-4">
            <div class="card shadow-sm rounded">
@@ -229,180 +264,181 @@
 </div>
 <!-- Sección Ofertas Normales -->
 <div class="container featured-products text-center mt-5" id="destacadas">
-   <h3 class="mb-4">Ofertas Destacadas</h3>
-   <div class="row">
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
-               <div class="card-body">
-                   <h5 class="card-title">Desarrollador Web</h5>
-                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
-               <div class="card-body">
-                   <h5 class="card-title">Analista de Datos</h5>
-                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
-               <div class="card-body">
-                   <h5 class="card-title">Gerente de Marketing</h5>
-                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
-<div class="container featured-products text-center mt-5" id="destacadas">
-   <h3 class="mb-4">Ofertas Destacadas</h3>
-   <div class="row">
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
-               <div class="card-body">
-                   <h5 class="card-title">Desarrollador Web</h5>
-                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
-               <div class="card-body">
-                   <h5 class="card-title">Analista de Datos</h5>
-                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
-               <div class="card-body">
-                   <h5 class="card-title">Gerente de Marketing</h5>
-                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
-<div class="container featured-products text-center mt-5" id="destacadas">
-   <h3 class="mb-4">Ofertas Destacadas</h3>
-   <div class="row">
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
-               <div class="card-body">
-                   <h5 class="card-title">Desarrollador Web</h5>
-                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
-               <div class="card-body">
-                   <h5 class="card-title">Analista de Datos</h5>
-                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
-               <div class="card-body">
-                   <h5 class="card-title">Gerente de Marketing</h5>
-                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
+    <h3 id="ofertas-abiertas" class="mb-4">Ofertas Abiertas</h3>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (11).png" class="card-img-top" alt="Oferta 1">
+                <div class="card-body">
+                    <h5 class="card-title">Seo Experto</h5>
+                    <p class="card-text">Empresa Mercado Libre Solicita</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (10).png" class="card-img-top" alt="Oferta 2">
+                <div class="card-body">
+                    <h5 class="card-title">Japones orador</h5>
+                    <p class="card-text">Empresa Busca este idioma</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (9).png" class="card-img-top" alt="Oferta 3">
+                <div class="card-body">
+                    <h5 class="card-title">Experto en redes sociales</h5>
+                    <p class="card-text">Marketing en redes.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="container featured-products text-center mt-5" id="destacadas">
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (13).png" class="card-img-top" alt="Oferta 1">
+                <div class="card-body">
+                    <h5 class="card-title">Maestro</h5>
+                    <p class="card-text">Únete a unviersidad unju para profesor</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (7).png" class="card-img-top" alt="Oferta 2">
+                <div class="card-body">
+                    <h5 class="card-title">Psicologo</h5>
+                    <p class="card-text">Empresa innovadora busca psicologo</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (12).png" class="card-img-top" alt="Oferta 3">
+                <div class="card-body">
+                    <h5 class="card-title">Jardinero</h5>
+                    <p class="card-text">Municipalidad de palpala</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="container featured-products text-center mt-5" id="destacadas">
+    
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (4).png" class="card-img-top" alt="Oferta 1">
+                <div class="card-body">
+                    <h5 class="card-title">Abogado</h5>
+                    <p class="card-text">Únete a una empresa líder en television</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (6).png" class="card-img-top" alt="Oferta 2">
+                <div class="card-body">
+                    <h5 class="card-title">Obrero</h5>
+                    <p class="card-text">Empresa Busca Obreros</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (5).png" class="card-img-top" alt="Oferta 3">
+                <div class="card-body">
+                    <h5 class="card-title">Experto en analisis de datos</h5>
+                    <p class="card-text">Lidera equipo de data</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
 
       <!-- service section -->
 
       <!--  footer -->
       <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/loogo2.png" alt="#" /></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contáctanos</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Buenos Aires, Argentina</li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> contacto@postulaciones.com</li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+54 11 12345678</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menú</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.html">Inicio</a></li>
-                        <li><a href="about.html">Acerca de</a></li>
-                        <li> <a href="service.html">Servicios</a></li>
-                        <li> <a href="team.html">Equipo</a></li>
-                        <li> <a href="client.html">Clientes</a></li>
-                        <li> <a href="contact.html">Contacto</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Publicaciones Recientes</h3>
-                     <ul class="link_icon">
-                        <li> <a href="#">Participa en nuestras vacantes</a></li>
-                        <li><a href="#">Reuniones para equipos de trabajo</a></li>
-                        <li> <a href="#">Nuevas oportunidades de empleo</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <input class="news" placeholder="Tu correo electrónico" type="email" name="Your Email">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send">Suscríbete</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="footer_bottom">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <p>© 2024 Todos los derechos reservados | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-12">
+                 
+                 </div>
+                 <div class="col-lg-5 col-md-6 col-sm-6">
+                    <h3>Contáctanos</h3>
+                    <ul class="location_icon">
+                       <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Jujuy, Argentina</li>
+                       <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> contacto@postulaciones.com</li>
+                       <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+54 11 12345678</li>
+                    </ul>
+                    <ul class="social_icon">
+                       <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                       <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                       <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                       <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                 </div>
+                 <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h3>Menú</h3>
+                    <ul class="link_icon">
+                       <li class="active"> <a href="index.html">Inicio</a></li>
+                       <li><a href="about.html">Acerca de</a></li>
+                       <li> <a href="service.html">Servicios</a></li>
+                       <li> <a href="team.html">Equipo</a></li>
+                       <li> <a href="client.html">Clientes</a></li>
+                       <li> <a href="contact.html">Contacto</a></li>
+                    </ul>
+                 </div>
+                 <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h3>Publicaciones Recientes</h3>
+                    <ul class="link_icon">
+                       <li> <a href="#">Participa en nuestras vacantes</a></li>
+                       <li><a href="#">Reuniones para equipos de trabajo</a></li>
+                       <li> <a href="#">Nuevas oportunidades de empleo</a></li>
+                    </ul>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Empleo FLash</h3>
+                    <form id="request" class="main_form">
+                       <div class="row">
+                          <div class="col-md-12">
+                             <input class="news" placeholder="Tu correo electrónico" type="email" name="Your Email">
+                          </div>
+                          <div class="col-md-12">
+                             <button class="send">Suscríbete</button>
+                          </div>
+                       </div>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="footer_bottom">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-12">
+                    <p>© 2024 Todos los derechos reservados | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

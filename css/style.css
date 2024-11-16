@@ -563,15 +563,6 @@ ul.sign li a i {
      line-height: 1px;
 }
 
-.text-bg a::before {
-     position: absolute;
-     content: "";
-     top: 3px;
-     border-right: #ffff00 solid 1px;
-     border-width: 90px;
-     height: 1px;
-     right: -111px;
-}
 
 .text-bg a:hover {
      color: #fff;
@@ -592,13 +583,13 @@ ul.sign li a i {
 
 .titlepage h2 {
      font-size: 36px;
-     color: #154492;
+     color: #1a73b8; /* Azul más suave */
      line-height: 45px;
      font-weight: bold;
      padding: 0;
      display: block;
      text-transform: uppercase;
-}
+ }
 
 .yellow {
      color: #f2db18;
@@ -688,12 +679,12 @@ ul.sign li a i {
 .about_box span {
      font-size: 17px;
      font-weight: 600;
-     color: #f2db18;
+     color: #d4a017; /* Dorado elegante */
      line-height: 30px;
      padding-top: 25px;
      text-transform: uppercase;
      display: block;
-}
+ }
 
 .try {
      float: left;

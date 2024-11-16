@@ -52,7 +52,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-9 col-sm-7">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
                            <span class="navbar-toggler-icon"></span>
                         </button>
@@ -67,16 +67,22 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="service.html">Postulaciones</a>
                               </li>
-                            
-                         
+                              <li class="nav-item">
+                                 <a class="nav-link" href="team.html">Premiun</a>
+                              </li>
+                              <!-- Solo mostrar en dispositivos pequeños (md y menores) -->
+                              <li class="nav-item d-md-none">
+                                 <a class="nav-link sign_btn" href="#">Regístrate</a>
+                              </li>
                            </ul>
                         </div>
                      </nav>
                   </div>
-                  <div class="col-md-3 col-sm-5 d_none">
+                  <!-- En la versión de escritorio (md y mayores), muestra el botón de registro a la derecha -->
+                  <div class="col-md-3 col-sm-5 d-none d-md-block">
                      <ul class="sign">
                         <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                        <li><a class="sign_btn" href="#">Regístrate</a></li>
+                        <li><a class="sign_btn" href="client.html">Regístrate</a></li>
                      </ul>
                   </div>
                </div>
@@ -90,42 +96,147 @@
       <!-- testimonial -->
    <!-- Formulario de Registro -->
    <div id="register" class="contact">
-      <div class="container mt-5">
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="titlepage">
-                      <h2><strong class="yellow">Registro de Usuario</strong></h2>
-                  </div>
+      <div class="container mt-1">
+        <div class="row">
+         
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <form onsubmit="registerUser(event)" id="register_form" class="contact_form">
+              <div class="row">
+                <div class="col-md-12">
+                  <input class="contact_control" placeholder="Usuario" type="text" id="username" required>
+                </div>
+                <div class="col-md-12">
+                  <input class="contact_control" placeholder="Nombre" type="text" id="firstName" required>
+                </div>
+                <div class="col-md-12">
+                  <input class="contact_control" placeholder="Apellido" type="text" id="lastName" required>
+                </div>
+                <div class="col-md-12">
+                  <input class="contact_control" placeholder="Correo Electrónico" type="email" id="email" required>
+                </div>
+                <div class="col-md-12">
+                  <input class="contact_control" placeholder="Contraseña" type="password" id="password" required>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="send_btn">Registrar</button>
+                </div>
               </div>
-          </div>
-          <div class="row">
-              <div class="col-md-8 offset-md-2">
-                  <form onsubmit="registerUser(event)" id="register_form" class="contact_form">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <input class="contact_control" placeholder="Usuario" type="text" id="username" required>
-                          </div>
-                          <div class="col-md-12">
-                              <input class="contact_control" placeholder="Nombre" type="text" id="firstName" required>
-                          </div>
-                          <div class="col-md-12">
-                              <input class="contact_control" placeholder="Apellido" type="text" id="lastName" required>
-                          </div>
-                          <div class="col-md-12">
-                              <input class="contact_control" placeholder="Correo Electrónico" type="email" id="email" required>
-                          </div>
-                          <div class="col-md-12">
-                              <input class="contact_control" placeholder="Contraseña" type="password" id="password" required>
-                          </div>
-                          <div class="col-md-12">
-                              <button type="submit" class="send_btn">Registrar</button>
-                          </div>
-                      </div>
-                  </form>
+            </form>
+    
+            <div class="social-login text-center mt-4">
+              <p>O regístrate usando</p>
+              <div class="social-buttons">
+                <button class="social-btn google-btn" onclick="registerWithGoogle()">
+                  <img src="images/Google__G__logo.svg.png" alt="Google" width="20"> Google
+                </button>
+                <button class="social-btn github-btn" onclick="registerWithGitHub()">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="20"> GitHub
+                </button>
+                <button class="social-btn facebook-btn" onclick="registerWithFacebook()">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="20"> Facebook
+                </button>
               </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
+    
+    <!-- Include styles for modern design -->
+    <style>
+      .contact_form {
+        background-color: #f9f9f9;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    
+      .contact_control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+    
+      .send_btn {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+    
+      .send_btn:hover {
+        background-color: #0056b3;
+      }
+    
+      .social-login p {
+        font-size: 16px;
+        color: #555;
+      }
+    
+      .social-buttons button {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px;
+      }
+    
+      .social-btn img {
+        margin-right: 8px;
+      }
+    
+      .social-btn:hover {
+        background-color: #f0f0f0;
+      }
+    
+      .google-btn {
+        color: #db4437;
+      }
+    
+      .github-btn {
+        color: #333;
+      }
+    
+      .facebook-btn {
+        color: #3b5998;
+      }
+    </style>
+    
+    <!-- Add the functions for social login -->
+    <script>
+      function registerWithGoogle() {
+        // Code for Google login
+        console.log("Google login clicked");
+      }
+    
+      function registerWithGitHub() {
+        // Code for GitHub login
+        console.log("GitHub login clicked");
+      }
+    
+      function registerWithFacebook() {
+        // Code for Facebook login
+        console.log("Facebook login clicked");
+      }
+    
+      function registerUser(event) {
+        event.preventDefault();
+        // Handle form submission logic here
+        console.log("Form submitted");
+      }
+    </script>
   
   <!-- Modal de Confirmación -->
   <div id="registerModal" class="modal">
@@ -184,7 +295,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="images/loogo2.png" alt="#" /></a>
+                  
                   </div>
                   <div class="col-lg-5 col-md-6 col-sm-6">
                      <h3>Contáctanos</h3>
@@ -220,7 +331,7 @@
                      </ul>
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
+                     <h3>Empleo FLash</h3>
                      <form id="request" class="main_form">
                         <div class="row">
                            <div class="col-md-12">

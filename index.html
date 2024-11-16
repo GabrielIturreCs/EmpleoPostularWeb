@@ -36,6 +36,119 @@
    <!-- Fuentes de iconos -->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <style>
+/* Banner Main */
+.banner_main {
+    position: relative;
+
+    background-size: cover; /* Recorta automáticamente para cubrir el área */
+    background-position: center center; /* Centra la imagen */
+    padding: 60px 0; /* Reduce la altura del banner */
+    height: auto; /* Ajusta según el contenido */
+}
+
+/* Ajustes de texto en el banner */
+.banner_main .text-bg {
+    margin-top: -20px; /* Empuja el texto hacia arriba */
+    padding-top: 30px; /* Espacio adicional si es necesario */
+}
+
+/* Imagen en el lado derecho */
+.ban_img img {
+    max-height: 700px; /* Limita la altura de la imagen */
+    object-fit: contain; /* Recorta la imagen si es necesario */
+    width: auto;
+}
+
+
+
+.btn-attractive:hover {
+    background-color: #2209af;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+/* Sobrescribir estilos para mejorar colores y diseño */
+.about {
+    background-color: #ffffff; /* Fondo blanco limpio */
+    padding: 50px 0;
+}
+
+.about_box {
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #f2f2f2; /* Bordes sutiles */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+.titlepage h2 {
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2c3e50; /* Azul grisáceo elegante */
+}
+
+.titlepage h2 .yellow {
+    color: #d4a017; /* Dorado suave para resaltar */
+}
+
+.about_box h3 {
+    font-size: 24px;
+    color: #1a73b8; /* Azul suave */
+    margin-bottom: 15px;
+}
+
+.about_box span {
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 30px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.about_box p {
+    font-size: 16px;
+    color: #4a4a4a; /* Gris oscuro para legibilidad */
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.about_box .try {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d4a017; /* Dorado llamativo */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.about_box a.read_morea {
+    background-color: #154492; /* Azul fuerte */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.about_box a.read_morea:hover {
+    background-color: #1a73b8; /* Azul más claro al pasar el mouse */
+    color: #ffffff;
+}
+
+.about_img figure img {
+    width: 100%;
+    border-radius: 10px; /* Bordes redondeados para suavizar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+   </style>
+
 </head>
 <!-- cuerpo -->
 
@@ -51,7 +164,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-9 col-sm-7">
-                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark">
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Alternar navegación">
                         <span class="navbar-toggler-icon"></span>
                      </button>
@@ -66,17 +179,22 @@
                            <li class="nav-item">
                               <a class="nav-link" href="service.html">Postulaciones</a>
                            </li>
-                         
-                    
-                           
+                           <li class="nav-item">
+                              <a class="nav-link" href="team.html">Premiun</a>
+                           </li>
+                           <!-- Solo mostrar en dispositivos pequeños (md y menores) -->
+                           <li class="nav-item d-md-none">
+                              <a class="nav-link sign_btn" href="#">Regístrate</a>
+                           </li>
                         </ul>
                      </div>
                   </nav>
                </div>
-               <div class="col-md-3 col-sm-5 d_none">
+               <!-- En la versión de escritorio (md y mayores), muestra el botón de registro a la derecha -->
+               <div class="col-md-3 col-sm-5 d-none d-md-block">
                   <ul class="sign">
                      <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                     <li><a class="sign_btn" href="client.html">Regístrate!</a></li>
+                     <li><a class="sign_btn" href="client.html">Regístrate</a></li>
                   </ul>
                </div>
             </div>
@@ -87,22 +205,27 @@
    <!-- banner -->
    <section class="banner_main">
       <div class="container">
-         <div class="row">
-            <div class="col-md-7 col-lg-7">
-               <div class="text-bg">
-                  <h1 class="display-4">Encuentra <br> Empleos Profesionales</h1>
-       <span class="lead d-block mb-3">para tu carrera</span>
-       <p class="mb-4">
-           Encuentra oportunidades laborales en todos los sectores del mercado. 
-           Muestra tu perfil al mundo usando nuestro creador de CV en1 línea y consigue empleo más rápido.
-       </p>
-   
-               <a href="service.html" class="btn btn-primary btn-lg mt-3">Postúlate Ya</a>
+         <div class="row align-items-center">
+            <!-- Columna de Texto -->
+            <div class="col-md-7 col-lg-7 order-2 order-lg-1">
+               <div class="text-bg mt-3">
+                  <h1 class="display-4 text-white font-weight-bold">Encuentra <br> Empleos Profesionales</h1>
+                  <span class="lead d-block mb-3 text-light">Avanza en tu carrera con las mejores oportunidades</span>
+                  <p class="mb-3 text-white">
+                     Descubre ofertas laborales en diversos sectores. Muestra tu perfil al mundo usando nuestro creador de CV en línea y encuentra el empleo ideal más rápido.
+                  </p>
+                  <!-- Botón atractivo -->
+               <a href="service.html"></a>
+                    <a href="service.html">
+                      <img src="images/Blue Modern Game Button Twitch Panel.png" alt="Botón de Postulaciones">
+                    </a>
+               </a>
                </div>
             </div>
-            <div class="col-md-5 col-lg-5">
-               <div class="ban_img">
-                  <figure><img src="images/cambio2.png" alt="#" /></figure>
+            <!-- Columna de Imagen -->
+            <div class="col-md-5 col-lg-5 order-1 order-lg-2">
+               <div class="ban_img text-center">
+                  <img src="images/cambio2.png" alt="Imagen de empleos" class="img-fluid shadow rounded">
                </div>
             </div>
          </div>
@@ -118,10 +241,10 @@
                   <div class="titlepage">
                      <h2><strong class="yellow">Postulaciones Abiertas</strong><br> ENCUENTRA EL EMPLEO DE TUS SUEÑOS</h2>
                   </div>
-                  <h3>Todo lo que necesitas en un solo lugar</h3>
+                 
                   <span>Haz que tu búsqueda de empleo sea más fácil y eficiente</span>
                   <p>Es un hecho establecido que los lectores se distraen por el contenido legible de una página al mirar su diseño. Lo importante al usar este tipo de contenido es que es más o menos normal</p>
-                  <span class="try">PRUEBA EL CREADOR DE CV EN LÍNEA GRATIS</span>
+                  <span class="try">BUSCA OFERTAS LABORALES ABIERTAS</span>
                   <a class="read_morea" href="service.html">Postulate ahora <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                </div>
             </div>
@@ -134,7 +257,35 @@
       </div>
    </div>
    <!-- fin sección de postulaciones -->
-
+   <section id="empresas-asociadas" style="padding: 40px 0; background-color: #f4f4f4;">
+      <div class="container">
+          <h2 style="text-align: center; font-size: 32px; font-weight: bold; color: #333;">Empresas Asociadas</h2>
+          <p style="text-align: center; font-size: 18px; color: #555;">Estamos orgullosos de colaborar con las mejores empresas del sector</p>
+          
+          <div class="row" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
+              <!-- Empresa 1 -->
+              <div class="col" style="flex: 1; min-width: 200px; text-align: center;">
+                  <img src="images/0019882_mercado-libre.png" alt="Logo Empresa 1" style="max-width: 140px; height: auto; margin-bottom: 10px;">
+                  <p style="font-size: 16px; color: #333;">Mercado Libre</p>
+              </div>
+              <!-- Empresa 2 -->
+              <div class="col" style="flex: 1; min-width: 200px; text-align: center;">
+                  <img src="images/logo-openix-1.png" alt="Logo Empresa 2" style="max-width: 180px; height: auto; margin-bottom: 10px;">
+                  <p style="font-size: 16px; color: #333;">Openix</p>
+              </div>
+              <!-- Empresa 3 -->
+              <div class="col" style="flex: 1; min-width: 200px; text-align: center;">
+                  <img src="images/images (1).png" alt="Logo Empresa 3" style="max-width: 150px; height: auto; margin-bottom: 10px;">
+                  <p style="font-size: 16px; color: #333;">Nubimetrics</p>
+              </div>
+              <!-- Empresa 4 -->
+              <div class="col" style="flex: 1; min-width: 200px; text-align: center;">
+                  <img src="images/agua-potable-jujuy_8887jpg.webp" alt="Logo Empresa 4" style="max-width: 255px; height: auto; margin-bottom: 10px;">
+                  <p style="font-size: 16px; color: #333;">Agua potable jujuy </p>
+              </div>
+          </div>
+      </div>
+  </section>
    <!-- pie de página -->
    <footer>
       <div class="footer">
@@ -177,7 +328,7 @@
                   </ul>
                </div>
                <div class="col-lg-3 col-md-6 col-sm-6">
-                  <h3>Newsletter</h3>
+                  <h3>Empleo FLash</h3>
                   <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12">
