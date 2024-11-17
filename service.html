@@ -53,7 +53,7 @@
 #ofertas-abiertas {
     font-size: 36px !important; /* Tamaño grande para el título */
     font-weight: bold !important;
-    color: #2a4d7f !important; /* Un azul más oscuro para contrastar */
+    color: #2b4d66 !important; /* Azul profundo elegante */
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
@@ -74,7 +74,7 @@
 #ofertas-destacadas {
     font-size: 36px !important; /* Tamaño grande para el título */
     font-weight: bold !important;
-    color: #ffd900 !important; /* Un color dorado cálido para resaltar */
+    color: #2b4d66 !important; /* Azul profundo elegante */
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3) !important;
@@ -229,41 +229,85 @@
  </div>
 <!-- Sección Ofertas Destacadas -->
 <div class="container featured-products text-center mt-5" id="destacadas">
-    <h3 id="ofertas-destacadas" class="mb-4">Ofertas Destacadas🔥🔥</h3>
-
-   <div class="row">
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
-               <div class="card-body">
-                   <h5 class="card-title">Desarrollador Web</h5>
-                   <p class="card-text">Únete a una empresa líder en tecnología.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
-               <div class="card-body">
-                   <h5 class="card-title">Analista de Datos</h5>
-                   <p class="card-text">Empresa innovadora busca analista de datos.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-12 col-sm-6 col-md-4 mb-4">
-           <div class="card shadow-sm rounded">
-               <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
-               <div class="card-body">
-                   <h5 class="card-title">Gerente de Marketing</h5>
-                   <p class="card-text">Lidera campañas exitosas en marketing.</p>
-                   <a href="contact.html" class="btn btn-apply">Postularse</a>
-               </div>
-           </div>
-       </div>
-   </div>
+    <h2 id="ofertas-destacadas" class="mb-4">Ofertas Destacadas🔥🔥</h2>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista .png" class="card-img-top" alt="Oferta 1">
+                <div class="card-body">
+                    <h5 class="card-title">Desarrollador Web</h5>
+                    <p class="card-text">Únete a una empresa líder en tecnología.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/office-2009693_1280.jpg" class="card-img-top" alt="Oferta 2">
+                <div class="card-body">
+                    <h5 class="card-title">Analista de Datos</h5>
+                    <p class="card-text">Empresa innovadora busca analista de datos.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card shadow-sm rounded">
+                <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (1).png" class="card-img-top" alt="Oferta 3">
+                <div class="card-body">
+                    <h5 class="card-title">Gerente de Marketing</h5>
+                    <p class="card-text">Lidera campañas exitosas en marketing.</p>
+                    <a href="contact.html" class="btn btn-apply">Postularse</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<style>
+/* Fondo llamativo para toda la sección */
+#destacadas {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    color: #333;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+}
+
+/* Estilo para el título */
+#ofertas-destacadas {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e3a8a; /* Azul marino para el título */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+}
+
+/* Tarjetas */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* Fondo blanco puro */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Botón */
+.btn-apply {
+    background-color: #1e3a8a; /* Azul marino para el botón */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-apply:hover {
+    background-color: #2563eb; /* Azul más claro al pasar el cursor */
+    color: #fff;
+}
+</style>
 <!-- Sección Ofertas Normales -->
 <div class="container featured-products text-center mt-5" id="destacadas">
     <h3 id="ofertas-abiertas" class="mb-4">Ofertas Abiertas</h3>
