@@ -18,7 +18,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>webwing</title>
+      <title>Ofertas</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -173,7 +173,7 @@
                                 <a class="nav-link" href="service.html">Postulaciones</a>
                              </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="team.html">Premiun</a>
+                                <a class="nav-link" href="team.html">Premium</a>
                              </li>
                              <!-- Solo mostrar en dispositivos pequeños (md y menores) -->
                              <li class="nav-item d-md-none">
@@ -353,7 +353,7 @@
                 <img src="/images/Post Instagram Frase Primavera Collage Aesthetic Minimalista  (13).png" class="card-img-top" alt="Oferta 1">
                 <div class="card-body">
                     <h5 class="card-title">Maestro</h5>
-                    <p class="card-text">Únete a unviersidad unju para profesor</p>
+                    <p class="card-text">Únete a universidad unju para profesor</p>
                     <a href="contact.html" class="btn btn-apply">Postularse</a>
                 </div>
             </div>
@@ -410,6 +410,7 @@
                     <h5 class="card-title">Experto en analisis de datos</h5>
                     <p class="card-text">Lidera equipo de data</p>
                     <a href="contact.html" class="btn btn-apply">Postularse</a>
+                    
                 </div>
             </div>
         </div>
@@ -459,7 +460,7 @@
                              <input class="news" placeholder="Tu correo electrónico" type="email" name="Your Email">
                           </div>
                           <div class="col-md-12">
-                             <button class="send">Suscríbete</button>
+                            <button class="send" style="background-color: red; color: white; padding: 10px 20px; margin-top: 10px; border: none; border-radius: 5px; cursor: pointer;">Suscríbete</button>
                           </div>
                        </div>
                     </form>
@@ -489,3 +490,59 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            const moreInfo = document.createElement("div");
+            moreInfo.classList.add("more-info");
+            moreInfo.innerHTML = `
+                <p>Información adicional sobre la oferta de trabajo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            `;
+            moreInfo.style.display = "none";
+            card.querySelector(".card-body").appendChild(moreInfo);
+
+            const btnMore = document.createElement("button");
+            btnMore.classList.add("btn", "btn-more");
+            btnMore.textContent = "Ver más";
+            card.querySelector(".card-body").appendChild(btnMore);
+
+            btnMore.addEventListener("click", function() {
+                if (moreInfo.style.display === "none") {
+                    moreInfo.style.display = "block";
+                    card.style.height = "auto";
+                    btnMore.textContent = "Ver menos";
+                } else {
+                    moreInfo.style.display = "none";
+                    card.style.height = "400px";
+                    btnMore.textContent = "Ver más";
+                    
+                }
+            });
+        });
+    });
+</script>
+<style>
+    .btn-more {
+        background-color: #ffc107;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 20px; /* Forma de óvalo */
+        padding: 10px 20px; /* Ajuste de padding para mantener la forma */
+        transition: background-color 0.3s;
+        margin-top: 1px; /* Subir el botón un pixel arriba */
+    }
+
+    .btn-more:hover {
+        background-color: #e0a800;
+    }
+
+    .more-info {
+        margin-top: 9px;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 9px;
+    }
+</style>
+</style>
+</style></script>
